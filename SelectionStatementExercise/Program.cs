@@ -9,14 +9,14 @@ namespace SelectionStatementExercise
         {
             //Number Guessing Game
             var r = new Random();
-            var favNumber = r.Next(0, 1001);
+            var favNumber = r.Next(0, 10);
             int userInput;
             var counter = 0;
 
 
             do
             {
-                Console.WriteLine("Pick a number from 1 - 1000");
+                Console.WriteLine("Pick a number from 1 - 10");
                 userInput = int.Parse(Console.ReadLine());
 
                 if (userInput < favNumber)
@@ -27,13 +27,14 @@ namespace SelectionStatementExercise
                 {
                     Console.WriteLine($"{userInput} is to high");
                 }
+                else
                 {
                     Console.WriteLine("You guessed it!");
                 }
 
                 counter++;
 
-                Console.WriteLine($"You have guessed (counter) times");
+                Console.WriteLine($"You have guessed {counter} times");
 
 
             } while (userInput != favNumber);
